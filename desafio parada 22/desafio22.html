@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="height: 1200px; background-image: linear-gradient(to right top, #19ebd8, #34bea8, #37937d, #316a58, #264437);">
+    
+    <script>
+
+function exibirPergunta(pergunta){
+  return prompt(pergunta);
+}
+
+function verificarResposta(resposta, respostaCorreta) {
+  return resposta.toLowerCase() === respostaCorreta.toLowerCase();
+}
+
+var pergunta1 = "Qual é o campeão mais roubado do lol?";
+var respostaCorreta1 = "Yasuo";
+
+var pergunta2 = "Qual Suporte tem habilidade unica de black shield?";
+var respostaCorreta2 = "Morgana";
+
+var pergunta3 = "Quantas torres tem no mapa de Summoner's Rift?";
+var respostaCorreta3 = "22";
+
+var pontuacao = 0;
+
+var resposta = exibirPergunta(pergunta1);
+if (verificarResposta(resposta, respostaCorreta1)) {
+  alert("Resposta correta!");
+  pontuacao += 1;
+} else {
+  alert("Resposta incorreta, correto é o Yasuo!");
+}
+
+resposta = exibirPergunta(pergunta2);
+if (verificarResposta(resposta, respostaCorreta2)) {
+  alert("Resposta correta!");
+  pontuacao += 1;
+} else {
+  alert("Resposta incorreta, correto é a Morgana!");
+}
+
+resposta = exibirPergunta(pergunta3);
+if (verificarResposta(resposta, respostaCorreta3)) {
+  alert("Resposta correta!");
+  pontuacao += 1;
+} else {
+  alert("Resposta incorreta, correto é 22 torres!");
+}
+
+alert("Sua pontuação final é: " + pontuacao);
+    </script>
+</body>
+</html>
